@@ -1,0 +1,35 @@
+<div class="d-flex w-form">
+  <form [formGroup]="formExample">
+    <div class="mb">
+      <label>Nome</label>
+      <input formControlName="nome" type="text" maxlength="100">
+      <p class="error" *ngIf="formExample.get('nome')?.errors" >Nome inválido</p>
+    </div>
+
+    <div class="mb">
+      <label>Email</label>
+      <input formControlName="email" type="email" maxlength="100">
+      <p class="error" *ngIf="formExample.get('email')?.errors" >Email inválido</p>
+    </div>
+
+    <div class="mb">
+      <label>Telefone</label>
+      <input formControlName="telefone" type="text" minlength="8" maxlength="9">
+      <p class="error" *ngIf="formExample.get('telefone')?.errors" >Telefone inválido</p>
+    </div>
+
+    <div class="mb">
+      <label>CPF</label>
+      <input formControlName="cpf" type="text" minlength="11" maxlength="11">
+      <p class="error" *ngIf="formExample.get('cpf')?.errors" >CPF inválido</p>
+    </div>
+
+    <div class="mb">
+      <label>Senha</label>
+      <input formControlName="senha" type="password" minlength="8" maxlength="20">
+      <p class="error" *ngIf="formExample.get('senha')?.errors" >Senha inválido</p>
+    </div>
+
+    <button class="btn-enviar w-form" type="submit" [disabled]="formExample.invalid" (click)="sendForm($event)">Enviar</button>
+  </form>
+</div>

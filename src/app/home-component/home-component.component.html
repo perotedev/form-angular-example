@@ -1,0 +1,9 @@
+<section>
+  <div class="content">
+    <h1 class="title">Exemplo de Form</h1>
+    <div class="d-flex">
+      <form-component class="form" (clienteCriado)="showClienteData($event)"></form-component>
+      <show-form-component class="cliente" *ngIf="showCliente" [cliente]="clienteCriado"></show-form-component>
+    </div>
+  </div>
+</section>
