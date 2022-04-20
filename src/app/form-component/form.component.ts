@@ -1,11 +1,11 @@
-import { ClienteInterface } from './../shared/cliente-interface';
+import { ClienteInterface } from '../shared/cliente-interface';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'form-component',
-  templateUrl: './form-component.component.html',
-  styleUrls: ['./form-component.component.css']
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
   @Output() clienteCriado = new EventEmitter<ClienteInterface>();

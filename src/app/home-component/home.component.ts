@@ -1,12 +1,12 @@
-import { ClienteInterface } from './../shared/cliente-interface';
+import { ClienteInterface } from '../shared/cliente-interface';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'home-component',
-  templateUrl: './home-component.component.html',
-  styleUrls: ['./home-component.component.css']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class HomeComponentComponent implements OnInit {
+export class HomeComponent implements OnInit {
   public showCliente: boolean = false;
   public clienteCriado: ClienteInterface;
 
